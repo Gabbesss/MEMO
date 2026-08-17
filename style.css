@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background: #000;
+
+    color: #00ff41;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.terminal {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    min-height: 100vh;
+
+    text-shadow:
+        0 0 4px #00ff41;
+}
+
+.ascii {
+
+    color: #00ff41;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: bold;
+
+    font-size:
+        clamp(7px, 2vw, 18px);
+
+    line-height: 1;
+
+    overflow-x: auto;
+
+    margin:
+        10px 0 15px;
+}
+
+.version {
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.line {
+
+    color: #00aa2b;
+
+    margin:
+        12px 0;
+}
+
+#boot {
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.search-area {
+
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: nowrap;
+}
+
+.search-area input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    background: #000;
+
+    border: 0;
+
+    outline: 0;
+
+    color: #00ff41;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 16px;
+
+    caret-color: #00ff41;
+
+    text-shadow:
+        0 0 4px #00ff41;
+}
+
+.commands {
+
+    color: #00aa2b;
+
+    font-size: 12px;
+
+    margin-top: 14px;
+
+    line-height: 1.8;
+}
+
+#screen {
+
+    min-height: 100px;
+
+    margin-top: 15px;
+}
+
+.result {
+
+    margin:
+        0 0 25px 0;
+
+    padding-left: 10px;
+
+    border-left:
+        2px solid #006b1d;
+}
+
+.result-title {
+
+    color: #00ff41;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.result-url {
+
+    color: #00aa2b;
+
+    font-size: 12px;
+
+    margin:
+        5px 0;
+}
+
+.result-text {
+
+    color: #00cc35;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.result-star {
+
+    color: #00ff41;
+
+    background: none;
+
+    border: 0;
+
+    padding: 0;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    cursor: pointer;
+}
+
+.empty {
+
+    color: #00851f;
+
+    margin-top: 20px;
+}
+
+.status {
+
+    position: fixed;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    padding:
+        7px 12px;
+
+    background: #001a06;
+
+    border-top:
+        1px solid #006b1d;
+
+    color: #00aa2b;
+
+    font-size: 11px;
+}
+
+#status {
+
+    color: #00ff41;
+}
+
+/* Cursor piscando */
+
+.search-area input {
+
+    animation:
+        cursorGlow 1s infinite;
+}
+
+@keyframes cursorGlow {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .65;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    .terminal {
+        padding: 12px;
+    }
+
+    .ascii {
+        font-size: 6px;
+    }
+
+    .version {
+        font-size: 10px;
+    }
+
+    #boot {
+        font-size: 12px;
+    }
+
+    .commands {
+        font-size: 10px;
+    }
+
+    .search-area {
+        font-size: 14px;
+    }
+
+    .search-area input {
+        font-size: 14px;
+    }
+
+}
