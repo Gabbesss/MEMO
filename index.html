@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MEMO.EXE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="terminal">
+  
+<pre class="ascii">
+ __  __ _____ __  __  ___
+|  \/  | ____|  \/  |/ _ \
+| |\/| |  _| | |\/| | | | |
+| |  | | |___| |  | | |_| |
+|_|  |_|_____|_|  |_|\___/
+</pre>
+
+<div class="version">
+MEMO.EXE // MEMORY SEARCH SYSTEM // VERSION 0.01
+</div>
+
+<div class="line">
+------------------------------------------------------------
+</div>
+
+<div id="boot">
+    SYSTEM READY.<br>
+    LOCAL INDEX ONLINE.<br>
+    MEMORY DATABASE INITIALIZED.<br>
+    <br>
+    TYPE A QUERY BELOW.
+</div>
+
+<div class="search-area">
+
+    <span>&gt; SEARCH: </span>
+
+    <input
+        id="search"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+    >
+
+</div>
+
+<div class="commands">
+    [ENTER] SEARCH&nbsp;&nbsp;
+    [H] HISTORY&nbsp;&nbsp;
+    [F] FAVORITES&nbsp;&nbsp;
+    [ESC] HOME
+</div>
+
+<div class="line">
+------------------------------------------------------------
+</div>
+
+<div id="screen"></div>
+
+<div class="status">
+
+    MEMO STATUS:
+    <span id="status">READY</span>
+
+</div>
+
+</div>
+
+<script src="memo.js"></script>
+
+</body>
+</html>
